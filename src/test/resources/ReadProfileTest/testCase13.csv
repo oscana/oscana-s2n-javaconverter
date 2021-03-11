@@ -1,0 +1,95 @@
+org.apache.struts.action.Action, oscana.s2n.struts.Action
+org.apache.struts.actions.DispatchAction, oscana.s2n.struts.DispatchAction
+org.apache.struts.actions.EventDispatchAction, oscana.s2n.struts.EventDispatchAction
+org.apache.struts.actions.LookupDispatchAction, oscana.s2n.struts.LookupDispatchAction
+org.apache.struts.actions.MappingDispatchAction, oscana.s2n.struts.MappingDispatchAction
+org.apache.struts.actions.EventActionDispatcher, oscana.s2n.struts.EventActionDispatcher
+org.apache.struts.validator.ValidatorForm, oscana.s2n.struts.ValidatorForm
+org.apache.struts.action.ActionForm,  oscana.s2n.struts.ActionForm
+org.apache.struts.action.DynaActionForm,  oscana.s2n.struts.DynaActionForm
+org.apache.struts.action.ActionForward,  oscana.s2n.struts.ActionForward
+org.apache.struts.action.ActionMapping, oscana.s2n.struts.ActionMapping
+org.apache.struts.action.ActionMessage, oscana.s2n.struts.ActionMessage
+org.apache.struts.action.ActionMessages, oscana.s2n.struts.ActionMessages
+org.apache.struts.actions.ActionDispatcher, oscana.s2n.struts.ActionDispatcher
+org.apache.struts.config.FormBeanConfig, oscana.s2n.struts.FormBeanConfig
+org.apache.struts.util.LabelValueBean, oscana.s2n.struts.LabelValueBean
+org.apache.struts.upload.FormFile, oscana.s2n.struts.FormFile
+org.apache.struts.action.ActionErrors, oscana.s2n.struts.ActionErrors
+org.apache.struts.upload.MultipartRequestHandler, oscana.s2n.struts.MultipartRequestHandler
+jp.co.tis.xenlon.constants.XenlonConstants,oscana.s2n.xenlon.constants.XenlonConstants
+jp.co.tis.xenlon.exception.XenlonAbstractRuntimeException,oscana.s2n.xenlon.exception.XenlonAbstractRuntimeException
+jp.co.tis.xenlon.exception.BusinessErrorException,oscana.s2n.xenlon.exception.BusinessErrorException
+jp.co.tis.xenlon.exception.SystemErrorException,oscana.s2n.xenlon.exception.SystemErrorException
+jp.co.tis.xenlon.dto.ExceptionMessage,oscana.s2n.xenlon.exception.ExceptionMessage
+jp.co.tis.xenlon.log.XenlonLogManager, nablarch.core.log.LoggerManager
+jp.co.tis.xenlon.util.XenlonDateUtil,oscana.s2n.xenlon.util.XenlonDateUtil
+jp.co.tis.xenlon.util.XenlonFormatUtil,oscana.s2n.xenlon.util.XenlonFormatUtil
+jp.co.tis.xenlon.util.XenlonStringUtil,oscana.s2n.xenlon.util.XenlonStringUtil
+jp.co.tis.xenlon.util.XenlonAnnotationUtil,oscana.s2n.xenlon.util.XenlonAnnotationUtil
+jp.co.tis.xenlon.util.XenlonPropertyUtil,oscana.s2n.xenlon.util.XenlonPropertyUtil
+jp.co.tis.xenlon.util.XenlonValidateUtil,oscana.s2n.xenlon.util.XenlonValidateUtil
+jp.co.tis.xenlon.business.authentication.Principal,oscana.s2n.xenlon.business.authentication.Principal
+jp.co.tis.xenlon.seasar.util.XenlonSingletonS2Container, nablarch.fw.dicontainer.nablarch.Containers
+jp.co.tis.xenlon.seasar.dto.XenlonAbstractDto, oscana.s2n.xenlon.NablarchAbstractDto
+jp.co.tis.xenlon.seasar.logic.XenlonAbstractLogic, oscana.s2n.xenlon.NablarchAbstractLogic
+jp.co.tis.xenlon.seasar.entity.XenlonAbstractEntity, oscana.s2n.xenlon.NablarchAbstractEntity
+jp.co.tis.xenlon.seasar.service.XenlonAbstractService, oscana.s2n.xenlon.NablarchAbstractService
+jp.co.tis.xenlon.web.constants.XenlonWebConstants, oscana.s2n.xenlon.constants.XenlonWebConstants
+jp.co.tis.xenlon.web.seasar.struts.action.XenlonAbstractAction, oscana.s2n.xenlon.NablarchAbstractAction
+jp.co.tis.xenlon.web.seasar.struts.action.XenlonActionUtil, oscana.s2n.xenlon.XenlonActionUtil
+jp.co.tis.xenlon.web.seasar.struts.form.XenlonAbstractForm, oscana.s2n.xenlon.NablarchAbstractForm
+jp.co.tis.xenlon.web.util.SessionUtil, oscana.s2n.sastruts.util.SessionUtil
+jp.co.tis.xenlon.web.util.XenlonWebUtil, oscana.s2n.xenlon.util.XenlonWebUtil
+jp.co.tis.xenlon.web.token.TokenProcessorFactory, oscana.s2n.xenlon.token.TokenProcessorFactory
+jp.co.tis.xenlon.web.token.XenlonTokenProcessor, oscana.s2n.xenlon.token.XenlonTokenProcessor
+jp.co.tis.xenlon.web.annotation.Reset , oscana.s2n.xenlon.annotation.Reset
+jp.co.tis.xenlon.web.seasar.struts.action.XenlonActionMessage, oscana.s2n.xenlon.seasar.struts.action.XenlonActionMessage
+org.seasar.extension.jdbc.name.PropertyName, oscana.s2n.sastruts.util.PropertyName
+org.seasar.framework.util.Base64Util, oscana.s2n.sastruts.util.Base64Util
+org.seasar.framework.util.FieldUtil, oscana.s2n.sastruts.util.FieldUtil
+org.seasar.framework.util.StringUtil, oscana.s2n.sastruts.util.StringUtil
+org.seasar.framework.beans.util.BeanUtil, null
+org.seasar.framework.beans.util.BeanMap, oscana.s2n.sastruts.util.BeanMap
+org.seasar.framework.beans.util.Beans, null
+org.seasar.struts.util.UploadUtil, oscana.s2n.sastruts.util.UploadUtil
+org.seasar.framework.exception.IORuntimeException, oscana.s2n.sastruts.exception.IORuntimeException
+org.seasar.struts.config.S2ExecuteConfig , oscana.s2n.sastruts.config.S2ExecuteConfig
+org.seasar.struts.enums.SaveType , oscana.s2n.sastruts.enums.SaveType
+org.seasar.struts.util.ResponseUtil, oscana.s2n.sastruts.util.ResponseUtil
+org.seasar.struts.util.URLEncoderUtil, oscana.s2n.sastruts.util.URLEncoderUtil
+org.seasar.struts.util.RequestUtil, oscana.s2n.sastruts.util.RequestUtil
+org.seasar.struts.util.RoutingUtil, oscana.s2n.sastruts.util.RoutingUtil
+org.seasar.struts.util.ServletContextUtil, oscana.s2n.sastruts.util.ServletContextUtil
+org.seasar.struts.filter.RoutingFilter, oscana.s2n.sastruts.filter.RoutingFilter
+org.apache.struts.util.TokenProcessor, oscana.s2n.struts.TokenProcessor
+org.apache.struts.Globals, oscana.s2n.struts.Globals
+org.apache.struts.action.*, oscana.s2n.struts.*
+org.apache.struts.util.MessageResources, oscana.s2n.struts.MessageResources
+org.seasar.struts.annotation.ActionForm, null
+org.seasar.struts.annotation.Execute, null
+org.seasar.struts.annotation.Required, nablarch.core.validation.ee.Required
+org.seasar.framework.container.annotation.tiger.Component, null
+org.seasar.framework.container.annotation.tiger.InstanceType, null
+org.seasar.framework.container.factory.SingletonS2ContainerFactory, oscana.s2n.sastruts.util.SingletonS2ContainerFactory
+org.seasar.framework.container.S2Container, oscana.s2n.sastruts.util.S2Container
+org.seasar.extension.jdbc.operation.Operations.*, null
+org.seasar.struts.annotation.IntegerType, oscana.s2n.validation.ParseInt
+org.seasar.struts.annotation.ByteType, oscana.s2n.validation.ParseByte
+org.seasar.struts.annotation.CreditCardType, org.hibernate.validator.constraints.CreditCardNumber
+org.seasar.struts.annotation.DateType, oscana.s2n.validation.ParseDate
+org.seasar.struts.annotation.DoubleRange, nablarch.core.validation.ee.DecimalRange
+org.seasar.struts.annotation.DoubleType, oscana.s2n.validation.ParseDouble
+org.seasar.struts.annotation.EmailType, org.hibernate.validator.constraints.Email
+org.seasar.struts.annotation.FloatRange, nablarch.core.validation.ee.DecimalRange
+org.seasar.struts.annotation.FloatType, oscana.s2n.validation.ParseFloat
+org.seasar.struts.annotation.IntRange, org.hibernate.validator.constraints.Range
+org.seasar.struts.annotation.LongRange, org.hibernate.validator.constraints.Range
+org.seasar.struts.annotation.LongType, oscana.s2n.validation.ParseLong
+org.seasar.struts.annotation.Mask, javax.validation.constraints.Pattern
+org.seasar.struts.annotation.Maxbytelength, oscana.s2n.validation.ByteLength
+org.seasar.struts.annotation.Maxlength, nablarch.core.validation.ee.Length
+org.seasar.struts.annotation.Minbytelength, oscana.s2n.validation.ByteLength
+org.seasar.struts.annotation.Minlength, nablarch.core.validation.ee.Length
+org.seasar.struts.annotation.ShortType, oscana.s2n.validation.ParseShort
+org.seasar.struts.annotation.UrlType, org.hibernate.validator.constraints.URL

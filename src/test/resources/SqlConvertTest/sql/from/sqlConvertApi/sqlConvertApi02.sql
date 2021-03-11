@@ -1,0 +1,4 @@
+SELECT
+    test
+FROM
+    TEST

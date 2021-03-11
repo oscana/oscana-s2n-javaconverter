@@ -1,0 +1,4 @@
+#if(${idFlg})
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)#end
+    @Column(name = "${tableName}", precision = ${length}, nullable = ${nullable}, unique = ${unique})

@@ -1,0 +1,4 @@
+HttpSession, oscana.s2n.servlet.HttpSessionHolder
+HttpServletResponse, oscana.s2n.servlet.HttpServletResponseHolder
+HttpServletRequest, oscana.s2n.servlet.HttpServletRequestHolder
+ServletContext, oscana.s2n.servlet.ServletContextHolder

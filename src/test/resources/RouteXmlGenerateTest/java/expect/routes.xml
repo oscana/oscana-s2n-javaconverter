@@ -1,0 +1,6 @@
+<routes>
+   <match path="/sampleSearchList/index/:sampleKbn" controller="SampleSearchList" action="index" />
+   <match path="/sampleSearchList/doSearch/:pageno" controller="SampleSearchList" action="doSearch" />
+   <match path="/sampleSearchList/fwCreate/:sampleKbn/:kcode" controller="SampleSearchList" action="fwCreate" />
+   <match path="/sampleSearchList/indexBack" controller="SampleSearchList" action="indexBack" />
+</routes>

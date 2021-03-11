@@ -1,0 +1,3 @@
+@Execute(validator=${isValidate}#if(${validate}), validate="${validate}"#end#if(${reset}), reset="${reset}"#end#if(${removeActionForm}), removeActionForm=${removeActionForm}#end#if(${validate} && ${stopOnValidationError}), stopOnValidationError=${stopOnValidationError}#end)#if(${input} && ${isValidate})
+
+    @OnError(type = ApplicationException.class, path = "/WEB-INF/view/${action}/${input}")#end

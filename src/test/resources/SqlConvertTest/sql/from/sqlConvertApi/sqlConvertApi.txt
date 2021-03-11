@@ -1,0 +1,9 @@
+SELECT
+    COUNT(*) RECORDCOUNT
+FROM
+    TABLE1
+WHERE
+     param1　IS NOT NULL
+    /*IF whereKu != null */
+     AND   /*$whereKu*/
+    /*END*/

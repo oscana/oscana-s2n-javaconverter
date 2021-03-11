@@ -1,0 +1,4 @@
+#if(${formClass} && !${isValidate})
+nabContext.setRequestScopedVar("form", ${formName});#end#if(${initSession})
+
+        ${sessionval} = OscanaHttpResourceConverUtil.getHttpSession(context);#end

@@ -1,0 +1,11 @@
+org.apache.struts.action.ActionForm,ActionForm
+org.apache.struts.validator.ValidatorForm,ActionForm
+org.apache.struts.action.Action,Action
+jp.co.tis.xenlon.seasar.dto.XenlonAbstractDto,NablarchAbstractDto
+jp.co.tis.xenlon.seasar.entity.XenlonAbstractEntity,NablarchAbstractEntity
+jp.co.tis.xenlon.seasar.logic.XenlonAbstractLogic,NablarchAbstractLogic
+jp.co.tis.xenlon.seasar.service.XenlonAbstractService,NablarchAbstractService
+jp.co.tis.xenlon.seasar.struts.action.XenlonAbstractAction,NablarchAbstractAction
+jp.co.tis.xenlon.seasar.struts.form.XenlonAbstractForm,NablarchAbstractForm
+jp.co.tis.xenlon.web.seasar.struts.action.XenlonAbstractAction,NablarchAbstractAction
+jp.co.tis.xenlon.web.seasar.struts.form.XenlonAbstractForm,NablarchAbstractForm

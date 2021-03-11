@@ -1,0 +1,42 @@
+#if(${form})
+    @Inject
+    @OscanaActionForm
+    public ${form} form;
+#end
+
+#if(${form})
+    @Execute(validator=${isValidate}#if(${validate}), validate="${validate}"#end#if(${reset}), reset="${reset}"#end#if(${removeActionForm}), removeActionForm=${removeActionForm}#end#if(${validate} && ${stopOnValidationError}), stopOnValidationError=${stopOnValidationError}#end)
+#end
+#if(${errorjsp})
+    @OnError(type = ApplicationException.class, path = "${StringUtils.addPathExt("/" + $module, $errorjsp)}")
+#end
+    public HttpResponse execute(HttpRequest nabHttpRequest, ExecutionContext context)  throws Exception {
+
+#if(${form})
+        ${form} form = context.getRequestScopedVar("form");
+#else
+        //Struts-config.xmlでform定義無し
+        ActionForm form = null;
+#end
+
+        HttpServletRequest httpServletRequest = createStrutsRequest(context);
+        HttpServletResponse httpServletResponse = createStrutsResponse(context);
+        ActionMapping mapping = createStrutsMapping(nabHttpRequest, context)
+#foreach($forward in $forwardList)
+            .add("$forward.name", "${StringUtils.addPath("/" + $module, $forward.path)}")
+#end
+            .createActionMapping();
+        mapping.setName("$!{action.name}");
+        mapping.setScope("$!{action.scope}");
+        mapping.setAttribute("$!{action.attribute}");
+        mapping.setActionId("$!{action.actionId}");
+#if($!{action.validate})
+        mapping.setValidate($!{action.validate});
+#end
+        mapping.setPath("$!{action.path}");
+        mapping.setParameter("$!{action.parameter}");
+        mapping.setType("$!{action.type}");
+
+
+        return execute(mapping, form, httpServletRequest, httpServletResponse).toResponse();
+    }

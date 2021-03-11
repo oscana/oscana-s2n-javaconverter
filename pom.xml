@@ -1,0 +1,126 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.github.oscana</groupId>
+  <artifactId>oscana-s2n-javaconverter</artifactId>
+  <version>1.0.0</version>
+
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.10</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.oscana</groupId>
+      <artifactId>oscana-s2n-converter-common</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+    <groupId>org.reflections</groupId>
+    <artifactId>reflections</artifactId>
+    <version>0.9.11</version>
+</dependency>
+   <!-- https://mvnrepository.com/artifact/com.opencsv/opencsv -->
+    <dependency>
+        <groupId>com.opencsv</groupId>
+        <artifactId>opencsv</artifactId>
+        <version>5.0</version>
+    </dependency>
+    <dependency>
+    <groupId>io.github.java-diff-utils</groupId>
+    <artifactId>java-diff-utils</artifactId>
+    <version>4.5</version>
+</dependency>
+    <dependency>
+    <groupId>io.github.java-diff-utils</groupId>
+    <artifactId>java-diff-utils</artifactId>
+    <version>4.5</version>
+</dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.6.2</version>
+      </plugin>
+    <!-- カバレッジ取得 -->
+      <plugin>
+           <groupId>org.jacoco</groupId>
+           <artifactId>jacoco-maven-plugin</artifactId>
+           <version>0.8.5</version>
+           <executions>
+             <execution>
+               <goals>
+                <goal>prepare-agent</goal>
+               </goals>
+             </execution>
+             <execution>
+               <id>report</id>
+               <phase>test</phase>
+               <goals>
+                 <goal>report</goal>
+               </goals>
+              </execution>
+            </executions>
+      </plugin>
+
+	<!-- 実行可能jarファイル用のプラグイン -->
+	<plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-assembly-plugin</artifactId>
+	    <version>3.0.0</version>
+	    <configuration>
+	        <finalName>s2n-javaconverter-all</finalName>
+	        <descriptorRefs>
+	            <!-- 依存するリソースをすべてjarに同梱する -->
+	            <descriptorRef>jar-with-dependencies</descriptorRef>
+	        </descriptorRefs>
+	        <archive>
+                <manifestEntries>
+                    <Multi-Release>true</Multi-Release>
+                </manifestEntries>
+	            <manifest>
+	                <mainClass>jp.co.tis.s2n.javaConverter.convert.ConvertStruts2Nablarch</mainClass>
+	            </manifest>
+	        </archive>
+	    </configuration>
+	    <executions>
+	        <execution>
+	            <!-- idタグは任意の文字列であれば何でもよい -->
+	            <id>oscana-s2n-javaconverter-all</id>
+	            <phase>package</phase>
+	            <goals>
+	                <goal>single</goal>
+	            </goals>
+	        </execution>
+	    </executions>
+	</plugin>
+
+    </plugins>
+  </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
+</project>
