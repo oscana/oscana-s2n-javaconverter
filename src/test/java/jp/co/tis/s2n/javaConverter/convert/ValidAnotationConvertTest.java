@@ -18,7 +18,7 @@ public class ValidAnotationConvertTest extends ConvertTest {
     public static void setUp() throws Exception {
         activeProfile = new S2nProfile();
         activeProfile.setProjectPath("src/test/resources/ValidAnotationConvertTest");
-        activeProfile.setFileEncording("UTF-8");
+        activeProfile.setFileEncoding("UTF-8");
 
         executeConvert(activeProfile);
     }

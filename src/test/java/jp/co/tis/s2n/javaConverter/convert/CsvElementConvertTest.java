@@ -17,7 +17,7 @@ public class CsvElementConvertTest extends ConvertTest {
     public static void setUp() throws Exception {
         activeProfile = new S2nProfile();
         activeProfile.setProjectPath("src/test/resources/CsvElementConvertTest");
-        activeProfile.setFileEncording("UTF-8");
+        activeProfile.setFileEncoding("UTF-8");
 
         executeConvert(activeProfile);
     }

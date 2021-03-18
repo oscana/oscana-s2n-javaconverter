@@ -130,9 +130,11 @@ public class SqlFileConverter extends AbstractBatchBase {
      */
     public void findDir(String fromPath, String toPath, String keywd, File dir) {
 
+        fromPath = fromPath.replace('\\', '/');
+        toPath = toPath.replace('\\', '/');
         println();
-        println("<<Path:" + dir.getPath());
-        String s1 = dir.getPath();
+        println("<<Path:" + dir.getPath().replace('\\', '/'));
+        String s1 = dir.getPath().replace('\\', '/');
         String s2 = s1.replace(fromPath, "");
         String s3 = toPath + s2;
         println(">>Path:" + s3);

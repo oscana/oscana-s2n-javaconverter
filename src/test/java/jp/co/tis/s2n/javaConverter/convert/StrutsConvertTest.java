@@ -17,7 +17,7 @@ public class StrutsConvertTest extends ConvertTest {
         activeProfile = new S2nProfile();
         activeProfile.setProjectPath("src/test/resources/StrutsConvertTest");
         activeProfile.setConvertMode(1);
-        activeProfile.setFileEncording("UTF-8");
+        activeProfile.setFileEncoding("UTF-8");
         activeProfile.setOnDoubleSubmissionPath("/error.jsp");
 
         executeConvert(activeProfile);

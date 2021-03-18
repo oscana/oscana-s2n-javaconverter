@@ -23,7 +23,7 @@ public class SqlConvertTest extends ConvertTest {
         LogUtils.init();
         activeProfile = new S2nProfile();
         activeProfile.setProjectPath("src/test/resources/SqlConvertTest");
-        activeProfile.setFileEncording("UTF-8");
+        activeProfile.setFileEncoding("UTF-8");
         activeProfile.setOnDoubleSubmissionPath("/error.jsp");
 
         executeConvert(activeProfile);
@@ -43,7 +43,7 @@ public class SqlConvertTest extends ConvertTest {
         sqlFileConv.setInPath(projectPath + sp + "sql" + sp + "from");
         sqlFileConv.setOutPath(projectPath + sp + "sql" + sp + "to");
         sqlFileConv.setTmpPath(projectPath + sp + "sql" + sp + "tmp");
-        sqlFileConv.setCodeName(activeProfile.getFileEncording());
+        sqlFileConv.setCodeName(activeProfile.getFileEncoding());
         sqlFileConv.setActiveProfile(activeProfile);
 
         sqlFileConv.execute();
@@ -69,7 +69,7 @@ public class SqlConvertTest extends ConvertTest {
         sqlFileConv.setInPath(projectPath + sp + "sql" + sp + "from");
         sqlFileConv.setOutPath(projectPath + sp + "sql" + sp + "to");
         sqlFileConv.setTmpPath(projectPath + sp + "sql" + sp + "tmp");
-        sqlFileConv.setCodeName(activeProfile.getFileEncording());
+        sqlFileConv.setCodeName(activeProfile.getFileEncoding());
         sqlFileConv.setActiveProfile(activeProfile);
 
         sqlFileConv.execute();
@@ -95,7 +95,7 @@ public class SqlConvertTest extends ConvertTest {
         sqlFileConv.setInPath(projectPath + sp + "sql" + sp + "from");
         sqlFileConv.setOutPath(projectPath + sp + "sql" + sp + "to");
         sqlFileConv.setTmpPath(projectPath + sp + "sql" + sp + "tmp");
-        sqlFileConv.setCodeName(activeProfile.getFileEncording());
+        sqlFileConv.setCodeName(activeProfile.getFileEncoding());
         sqlFileConv.setActiveProfile(activeProfile);
 
         sqlFileConv.execute();

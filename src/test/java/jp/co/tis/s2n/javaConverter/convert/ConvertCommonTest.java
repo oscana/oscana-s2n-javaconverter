@@ -18,7 +18,7 @@ public class ConvertCommonTest extends ConvertTest {
         LogUtils.init();
         activeProfile = new S2nProfile();
         activeProfile.setProjectPath("src/test/resources/ConvertCommonTest");
-        activeProfile.setFileEncording("UTF-8");
+        activeProfile.setFileEncoding("UTF-8");
         activeProfile.setOnDoubleSubmissionPath("/error.jsp");
         activeProfile.setBasePackage("jp.co");
         activeProfile.setConvertMode(3);

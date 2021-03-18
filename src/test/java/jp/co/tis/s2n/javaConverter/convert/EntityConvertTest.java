@@ -17,7 +17,7 @@ public class EntityConvertTest extends ConvertTest {
     public static void setUp() throws Exception {
         activeProfile = new S2nProfile();
         activeProfile.setProjectPath("src/test/resources/EntityConvertTest/Upper");
-        activeProfile.setFileEncording("UTF-8");
+        activeProfile.setFileEncoding("UTF-8");
         activeProfile.setOnDoubleSubmissionPath("/error.jsp");
 
         executeConvert(activeProfile);
@@ -51,7 +51,7 @@ public class EntityConvertTest extends ConvertTest {
 
         S2nProfile activeProfileLower = new S2nProfile();
         activeProfileLower.setProjectPath("src/test/resources/EntityConvertTest/Lower");
-        activeProfileLower.setFileEncording("UTF-8");
+        activeProfileLower.setFileEncoding("UTF-8");
         activeProfileLower.setOnDoubleSubmissionPath("/error.jsp");
         activeProfileLower.setTableNameCase(1);
         executeConvert(activeProfileLower);
@@ -108,7 +108,7 @@ public class EntityConvertTest extends ConvertTest {
     public void testConvertEntityApi() {
         S2nProfile activeProfile2 = new S2nProfile();
         activeProfile2.setProjectPath("src/test/resources/EntityConvertTest");
-        activeProfile2.setFileEncording("UTF-8");
+        activeProfile2.setFileEncoding("UTF-8");
         activeProfile2.setOnDoubleSubmissionPath("/error.jsp");
         executeConvert(activeProfile2);
         String entityFileName01 = "TestConvertEntityApi01Entity.java";

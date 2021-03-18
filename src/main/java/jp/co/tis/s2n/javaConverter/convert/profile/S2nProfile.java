@@ -28,7 +28,7 @@ public class S2nProfile {
     private String testDeployPath;
     private String savePathForRoutexml;
     private StrutsAnalyzeResult[] strutsAnalyzeResultList;
-    private String fileEncording;
+    private String fileEncoding;
     private String onDoubleSubmissionPath;
     private int convertMode;
     private int tableNameCase;
@@ -65,12 +65,12 @@ public class S2nProfile {
             } else {
                 this.setBasePackage(prop.getProperty("basePackage"));
             }
-            // fileEncording
-            if (StringUtils.isEmpty(prop.getProperty("fileEncording"))) {
-                System.err.print("エラー:fileEncordingは必須です。");
+            // fileEncoding
+            if (StringUtils.isEmpty(prop.getProperty("fileEncoding"))) {
+                System.err.print("エラー:fileEncodingは必須です。");
                 System.exit(-1);
             } else {
-                this.setFileEncording(prop.getProperty("fileEncording"));
+                this.setFileEncoding(prop.getProperty("fileEncoding"));
             }
             // savePathForRoutexml
             if (!StringUtils.isEmpty(prop.getProperty("savePathForRoutexml"))) {
@@ -234,16 +234,16 @@ public class S2nProfile {
      * ファイルエンコーディングを取得する。
      * @return ファイルエンコーディング
      */
-    public String getFileEncording() {
-        return fileEncording;
+    public String getFileEncoding() {
+        return fileEncoding;
     }
 
     /**
      * ファイルエンコーディングを設定する。
-     * @param fileEncording ファイルエンコーディング
+     * @param fileEncoding ファイルエンコーディング
      */
-    public void setFileEncording(String fileEncording) {
-        this.fileEncording = fileEncording;
+    public void setFileEncoding(String fileEncoding) {
+        this.fileEncoding = fileEncoding;
     }
 
     /**

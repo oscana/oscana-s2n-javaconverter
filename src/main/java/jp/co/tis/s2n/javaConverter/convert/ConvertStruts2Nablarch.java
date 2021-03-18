@@ -98,7 +98,7 @@ public class ConvertStruts2Nablarch extends AbstractJavaParser implements JavaKe
         parserJava.setInPath(projectPath + "java" + sp + "from");
         parserJava.setOutPath(projectPath + "java" + sp + "to");
         parserJava.setTmpPath(projectPath + "java" + sp + "tmp");
-        parserJava.setCodeName(activeProfile.getFileEncording());
+        parserJava.setCodeName(activeProfile.getFileEncoding());
 
         parserJava.setStrutsAnalyzeResultList(activeProfile.getStrutsAnalyzeResultList());
 
@@ -121,7 +121,7 @@ public class ConvertStruts2Nablarch extends AbstractJavaParser implements JavaKe
         sqlFileConv.setInPath(projectPath + "sql" + sp + "from");
         sqlFileConv.setOutPath(projectPath + "sql" + sp + "to");
         sqlFileConv.setTmpPath(projectPath + "sql" + sp + "tmp");
-        sqlFileConv.setCodeName(activeProfile.getFileEncording());
+        sqlFileConv.setCodeName(activeProfile.getFileEncoding());
         sqlFileConv.setActiveProfile(activeProfile);
 
         sqlFileConv.execute();

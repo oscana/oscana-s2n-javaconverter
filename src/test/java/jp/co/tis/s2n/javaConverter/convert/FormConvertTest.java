@@ -19,7 +19,7 @@ public class FormConvertTest extends ConvertTest {
         LogUtils.init();
         activeProfile = new S2nProfile();
         activeProfile.setProjectPath("src/test/resources/FormConvertTest");
-        activeProfile.setFileEncording("UTF-8");
+        activeProfile.setFileEncoding("UTF-8");
         activeProfile.setOnDoubleSubmissionPath("/error.jsp");
 
         executeConvert(activeProfile);

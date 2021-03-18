@@ -80,7 +80,7 @@ public class RegistrationForm extends ActionForm implements Serializable {
     }
 
     @Required
-    @Pattern(regexp = "^\w+$")
+    @Pattern(regexp = "^\\w+$")
     @Length(min = 5)
     @ParseByte
     @ParseDate(datePattern = "yyyyMMdd")
@@ -114,7 +114,7 @@ public class RegistrationForm extends ActionForm implements Serializable {
         this.addr = addr;
     }
 
-    @Pattern(regexp = "^\(?(\d{3})\)?[-| ]?(\d{3})[-| ]?(\d{4})$")
+    @Pattern(regexp = "^\\(?(\\d{3})\\)?[-| ]?(\\d{3})[-| ]?(\\d{4})$")
     @ParseDouble
     @ParseFloat
     @DecimalRange

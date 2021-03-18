@@ -24,7 +24,7 @@ public class StrutsAnalyzeResultTest2 extends ConvertTest {
         LogUtils.init();
         activeProfile = new S2nProfile();
         activeProfile.setProjectPath("src/test/resources/StrutsAnalyzeResultTest2/java");
-        activeProfile.setFileEncording("UTF-8");
+        activeProfile.setFileEncoding("UTF-8");
         activeProfile.setConvertMode(1);
         activeProfile.setOnDoubleSubmissionPath("/error.jsp");
         activeProfile.setBasePackage("org.apache.struts.webapp");

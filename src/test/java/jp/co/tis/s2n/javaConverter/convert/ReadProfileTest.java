@@ -149,7 +149,7 @@ public class ReadProfileTest {
     }
 
     /**
-     * fileEncordingを設定しない場合、設定ファイルを読めないこと
+     * fileEncodingを設定しない場合、設定ファイルを読めないこと
      */
     @Test
     public void testReadProfileCase6() {
@@ -163,7 +163,7 @@ public class ReadProfileTest {
             // 出力メッセージを確認
             System.err.flush();
             final String actual = byteArrayOutputStream.toString();
-            final String expected = "エラー:fileEncordingは必須です。";
+            final String expected = "エラー:fileEncodingは必須です。";
             assertEquals(expected, actual);
 
         } catch (Exception e) {

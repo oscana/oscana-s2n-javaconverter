@@ -19,7 +19,7 @@ public class ExceptionChangeHandlerTest extends ConvertTest {
         LogUtils.init();
         activeProfile = new S2nProfile();
         activeProfile.setProjectPath("src/test/resources/program/ExceptionChangeHandlerTest");
-        activeProfile.setFileEncording("UTF-8");
+        activeProfile.setFileEncoding("UTF-8");
         executeConvert(activeProfile);
     }
 

@@ -18,7 +18,7 @@ public class SAStrutsConvertTest extends ConvertTest {
         activeProfile.setBasePackage("tutorial");
         activeProfile.setProjectPath("src/test/resources/SAStrutsConvertTest");
         activeProfile.setConvertMode(2);
-        activeProfile.setFileEncording("UTF-8");
+        activeProfile.setFileEncoding("UTF-8");
         activeProfile.setOnDoubleSubmissionPath(null);
 
         executeConvert(activeProfile);

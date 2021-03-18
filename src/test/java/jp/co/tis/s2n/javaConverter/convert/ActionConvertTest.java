@@ -19,7 +19,7 @@ public class ActionConvertTest extends ConvertTest {
         LogUtils.init();
         activeProfile = new S2nProfile();
         activeProfile.setProjectPath("src/test/resources/ActionConvertTest");
-        activeProfile.setFileEncording("UTF-8");
+        activeProfile.setFileEncoding("UTF-8");
         activeProfile.setOnDoubleSubmissionPath("/error.jsp");
         activeProfile.setBasePackage("jp.co.tis");
         activeProfile.setConvertMode(3);

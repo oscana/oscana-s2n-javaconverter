@@ -76,7 +76,7 @@ public class ConvertTest {
         parserJava.setInPath(projectPath + sp + "from");
         parserJava.setOutPath(projectPath + sp + "to");
         parserJava.setTmpPath(projectPath + sp + "tmp");
-        parserJava.setCodeName(activeProfile.getFileEncording());
+        parserJava.setCodeName(activeProfile.getFileEncoding());
         parserJava.setStrutsAnalyzeResultList(activeProfile.getStrutsAnalyzeResultList());
         try {
             parserJava.createRoutes(projectPath);

@@ -21,7 +21,7 @@ public class MaskValidateHandler extends StrutsAbstractValidateHandler {
     @Override
     public ValidateAnnotation handle(Field curField) {
         String mask = getVarValue(curField, "mask");
-        return new FieldValidateAnnotation("Pattern").addStringParameter("regexp", mask);
+        return new FieldValidateAnnotation("Pattern").addRegexpStringParameter("regexp", mask);
     }
 
 }
