@@ -11,7 +11,7 @@ import java.util.List;
 public class TestConvertJavaProgramService08 implements Serializable {
 
     public int delete(Employee employee) {
-        int count = jdbcManager.delete(employee).execute();
+        int count = jdbcManager.delete ( employee ) . execute( );
         return count;
     }
 

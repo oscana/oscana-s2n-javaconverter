@@ -23,7 +23,7 @@ import oscana.s2n.common.DataUtil;
 public class TestConvertJavaProgramService02 implements Serializable {
 
     public long getCountBySqlFile() {
-        long count = DataUtil.getCountQueryResult(DbConnectionContext.getConnection().prepareParameterizedSqlStatementBySqlId(ParamFilter.sqlFileNameToKey("getCountBySqlFile.sql")).executeQueryByMap(null));
+        long count = DataUtil.getCountQueryResult(DbConnectionContext.getConnection().prepareParameterizedSqlStatementBySqlId (ParamFilter.sqlFileNameToKey( "getCountBySqlFile.sql" )).executeQueryByMap( ));
         return count;
     }
 

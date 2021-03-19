@@ -10,6 +10,7 @@ import java.io.Reader;
 
 import org.junit.Test;
 
+import jp.co.tis.s2n.javaConverter.keyword.JavaKeyword;
 import jp.co.tis.s2n.javaConverter.node.Node;
 import jp.co.tis.s2n.javaConverter.token.Token;
 import jp.co.tis.s2n.javaConverter.token.TokenMgr;
@@ -27,6 +28,9 @@ public class JavaParserTest {
     @Test
     public void testParse() {
         assertEquals("TempForStr",JavaParser.parse("test", false).getString());
+
+        Node node = JavaParser.parse("\t", false);
+        assertEquals("TempForStr\t",node.getString());
     }
 
     /**
@@ -174,8 +178,64 @@ public class JavaParserTest {
         JavaParser.procOther(jpc, new Token(Token.NAME,"while"));
         assertEquals("while",jpc.eNode.getString());
 
+        jpc.initEnd = false;
         jpc.prevCRLF = false;
         JavaParser.procOther(jpc, new Token(Token.NAME,"if"));
-        assertEquals("while if",jpc.eNode.getString());
+        assertEquals("whileif",jpc.eNode.getString());
+
+        jpc = new JavaParseCtrl("testDo");
+        jpc.initEnd = false;
+        jpc.cNode = Node.create(Node.T_NORMAL, "a");
+        jpc.cNode.add(Node.create(Node.T_NORMAL, "b"));
+        jpc.cNode.add(Node.create(Node.T_NORMAL, "do"));
+        jpc.cNode.add(Node.create(Node.T_NORMAL, "{"));
+        JavaParser.procOther(jpc, new Token(Token.NAME,"while"));
+        assertEquals("testDowhile",jpc.eNode.getString());
+
+        JavaParser.procOther(jpc, new Token(Token.NAME,"@Inject"));
+        assertEquals("@Inject",jpc.eNode.getString());
+
+        JavaParser.procOther(jpc, new Token(Token.NAME,JavaKeyword.PROTECTED));
+        assertEquals(JavaKeyword.PROTECTED,jpc.eNode.getString());
+
+        JavaParser.procOther(jpc, new Token(Token.NAME,JavaKeyword.PRIVATE));
+        assertEquals(JavaKeyword.PRIVATE,jpc.eNode.getString());
+
+        jpc = new JavaParseCtrl("");
+        jpc.eNode = Node.create(new Token(Token.NAME,"X"));
+        jpc.initEnd = true;
+        Token token = new Token(Token.NAME,"Y");
+        JavaParser.procOther(jpc, token);
+        assertEquals("X Y",jpc.eNode.getString());
+    }
+
+    /**
+     * procSymbolメソッドのテスト
+     */
+    @Test
+    public void testProcSymbol() {
+        JavaParseCtrl jpc = new JavaParseCtrl("test");
+        jpc.eNode = Node.create(Node.T_NORMAL, "switch");
+        JavaParser.procSymbol(jpc, new Token(Token.SYMBOL,"{"));
+        assertFalse(jpc.initEnd);
+
+        jpc.eNode = Node.create(Node.T_NORMAL, "if");
+        jpc.eNode.addParam(new Token(Token.SYMBOL,"{"));
+        JavaParser.procSymbol(jpc, new Token(Token.SYMBOL,"{"));
+        assertFalse(jpc.initEnd);
+
+        jpc.eNode = Node.create(Node.T_NORMAL, "if");
+        jpc.eNode.addParam(new Token(Token.COLON,":"));
+        JavaParser.procSymbol(jpc, new Token(Token.SYMBOL,"{"));
+        assertFalse(jpc.initEnd);
+
+        jpc.eNode = Node.create(Node.T_NORMAL, "if");
+        jpc.eNode.addParam(new Token(Token.NAME,"a"));
+        JavaParser.procSymbol(jpc, new Token(Token.SYMBOL,"{"));
+        assertFalse(jpc.initEnd);
+
+        jpc.eNode = Node.create(Node.T_COMMENT1, "/*");
+        JavaParser.procSymbol(jpc, new Token(Token.SYMBOL,"."));
+        assertTrue(jpc.initEnd);
     }
 }

@@ -45,12 +45,14 @@ public  class TestConvertServiceApiOkService extends ChangeTestBaseService imple
     }
 
     public List<BeanMap> selectByFrom02() {
-        List<BeanMap> results = UniversalDao.findAll(BeanMap.class);
+        // TODO ツールで変換できません :  
+        List<BeanMap> results = jdbcManager.from ( BeanMap.class ) . getSingleResult ( );
         return results;
     }
 
     public List<BeanMap> selectByFrom03() {
-        List<BeanMap> results = UniversalDao.findById(BeanMap.class,100);
+        // TODO ツールで変換できません :   
+        List<BeanMap> results = jdbcManager.from ( BeanMap.class ) . id ( 100 ) . getSingleResult ( );
         return results;
     }
 
@@ -65,7 +67,8 @@ public  class TestConvertServiceApiOkService extends ChangeTestBaseService imple
     }
 
     public int updateBySqlFile01() {
-        int count = DbConnectionContext.getConnection().prepareParameterizedSqlStatementBySqlId("examples/sql/employee/update.sql").executeUpdateByObject(params);
+        // TODO ツールで変換できません :   
+        int count = jdbcManager.updateBySqlFile ( "examples/sql/employee/update.sql" , params ) . execute ( );
         return count;
     }
 
@@ -74,7 +77,7 @@ public  class TestConvertServiceApiOkService extends ChangeTestBaseService imple
         public int update01(Employee employee) { int count = UniversalDao.update(employee); return count; }  
         // TODO ツールで変換できません : excludesNull().
         public int update02(Employee employee) { int count = jdbcManager.update(employee).excludesNull().execute)((); return count; }  
-        public long getCountOpeBySqlFile01(String path, Object parameter) { return DataUtil.getCountQueryResult(DbConnectionContext.getConnection().prepareParameterizedSqlStatementBySqlId(ParamFilter.sqlFileNameToKey("jp.co.tis.sample.service.TestConvert#" + "testConvert.sql"), parameter).executeQueryByMap(parameter)); }  
+        public long getCountOpeBySqlFile01(String path, Object parameter) { return DataUtil.getCountQueryResult(DbConnectionContext.getConnection().prepareParameterizedSqlStatementBySqlId(ParamFilter.sqlFileNameToKey("testConvert#1.sql"), parameter).executeQueryByMap(parameter)); }  
         public long getCountOpeBySqlFile02(String path, Object parameter) { return DataUtil.getCountQueryResult(DbConnectionContext.getConnection().prepareParameterizedSqlStatementBySqlId(ParamFilter.sqlFileNameToKey("jp.co.tis.sample.service.TestConvert#" + "testConvert.sql")).executeQueryByMap(null)); }  
         // TODO ツールで変換できません : excludesNull().
         public Object selectBySqlFile01(String path, Object parameter) { return selectBySqlFile("testConvert.sql",String.class).excludesNull().getSingleResult)((); }  
@@ -88,4 +91,4 @@ public  class TestConvertServiceApiOkService extends ChangeTestBaseService imple
         public List<Ope> doSelect07() { return UniversalDao.findById(new GenericsUtil<null>().getType() ,(1); }   
         // TODO ツールで変換できません : excludeNulls().(
         public int doUpdateBySqlFile01(String path, Object parameter) { return updateBySqlFile(path, parameter).excludeNulls().execute)(();  }  
-        public Object doHandle(String path, Object parameter) { return Containers.get().getComponent(parameter); } } 
+        public Object doHandle(String path, Object parameter) { return Containers.get().getComponent (parameter); } } 

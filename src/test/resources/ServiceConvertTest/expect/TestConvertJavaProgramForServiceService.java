@@ -69,12 +69,13 @@ public class TestConvertJavaProgramForServiceService extends ChangeTestBaseServi
     }
 
     public int doUpdateBySqlFile(String path, Object parameter) {
-        return DbConnectionContext.getConnection().prepareParameterizedSqlStatementBySqlId(path).executeUpdateByObject( parameter);
+        // TODO ツールで変換できません :   
+        return updateBySqlFile ( path, parameter ) . execute ( );
 
     }
 
     public Ope doFindById(String id) {
-        return UniversalDao.findById(new GenericsUtil<Ope>().getType() ,id);
+        return UniversalDao.findById (new GenericsUtil<Ope>().getType() , id );
     }
 
     public List<Ope> doSelect() {
@@ -82,7 +83,7 @@ public class TestConvertJavaProgramForServiceService extends ChangeTestBaseServi
     }
 
     public List<Ope> doFindAll() {
-        return UniversalDao.findAll(new GenericsUtil<Ope>().getType());
+        return UniversalDao.findAll (new GenericsUtil<Ope>().getType() );
     }
 
     public int doUpdate(Ope ope) {
@@ -94,7 +95,7 @@ public class TestConvertJavaProgramForServiceService extends ChangeTestBaseServi
     }
 
     public int doDelete(Ope ope) {
-        return UniversalDao.delete(ope);
+        return UniversalDao.delete ( ope );
     }
 
     public List<Ope> getOpeListByWhere(Class<Ope> baseClass, String path, Object parameter) {
@@ -168,7 +169,7 @@ public class TestConvertJavaProgramForServiceService extends ChangeTestBaseServi
 
     public long getCountBySqlFileTest(Employee employee) {
 
-        long count = DataUtil.getCountQueryResult(DbConnectionContext.getConnection().prepareParameterizedSqlStatementBySqlId(ParamFilter.sqlFileNameToKey("examples/sql/employee/selectAll.sql")).executeQueryByMap(null));
+        long count = DataUtil.getCountQueryResult(DbConnectionContext.getConnection().prepareParameterizedSqlStatementBySqlId (ParamFilter.sqlFileNameToKey("examples/sql/employee/selectAll.sql")).executeQueryByMap(null));
         return count;
     }
 

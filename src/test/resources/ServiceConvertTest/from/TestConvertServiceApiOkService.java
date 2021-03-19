@@ -17,12 +17,12 @@ public  class TestConvertServiceApiOkService extends ChangeTestBaseService imple
     }
 
     public List<BeanMap> selectByFrom02() {
-        List<BeanMap> results = jdbcManager.from(BeanMap.class).getSingleResult();
+        List<BeanMap> results = jdbcManager.from ( BeanMap.class ) . getSingleResult ( );
         return results;
     }
 
     public List<BeanMap> selectByFrom03() {
-        List<BeanMap> results = jdbcManager.from(BeanMap.class).id(100).getSingleResult();
+        List<BeanMap> results = jdbcManager.from ( BeanMap.class ) . id ( 100 ) . getSingleResult ( );
         return results;
     }
 
@@ -37,7 +37,7 @@ public  class TestConvertServiceApiOkService extends ChangeTestBaseService imple
     }
 
     public int updateBySqlFile01() {
-        int count = jdbcManager.updateBySqlFile("examples/sql/employee/update.sql",params).execute();
+        int count = jdbcManager.updateBySqlFile ( "examples/sql/employee/update.sql" , params ) . execute ( );
         return count;
     }
 
@@ -57,7 +57,7 @@ public  class TestConvertServiceApiOkService extends ChangeTestBaseService imple
     }
 
     public long getCountOpeBySqlFile01(String path, Object parameter) {
-        return getCountBySqlFile("testConvert.sql", parameter);
+        return getCountBySqlFile("testConvert#1.sql", parameter);
     }
 
     public long getCountOpeBySqlFile02(String path, Object parameter) {
@@ -103,6 +103,6 @@ public  class TestConvertServiceApiOkService extends ChangeTestBaseService imple
     }
 
     public Object doHandle(String path, Object parameter) {
-        return XenlonSingletonS2Container.getComponent(parameter);
+        return XenlonSingletonS2Container.getComponent (parameter);
     }
 }

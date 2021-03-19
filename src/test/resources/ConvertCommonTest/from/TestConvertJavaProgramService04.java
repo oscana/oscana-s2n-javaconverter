@@ -11,7 +11,7 @@ import java.util.List;
 public class TestConvertJavaProgramService04 implements Serializable {
 
     public Employee from() {
-        Employee result = jdbcManager.from(Employee.class).getSingleResult();
+        Employee result = jdbcManager.from ( Employee.class ) . getSingleResult( );
         return result;
     }
 

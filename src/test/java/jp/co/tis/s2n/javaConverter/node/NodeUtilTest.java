@@ -37,6 +37,11 @@ public class NodeUtilTest {
         Node node3 = Node.create(Node.T_CLASS,"test");
         node3.addParam(new Token(Node.T_NORMAL,"test"));
         NodeUtil.fprintAll(s2nfilewriter, node3);
+
+        S2nProfile s2nProfile = new S2nProfile();
+        s2nProfile.setLineSeparator("\r");
+        S2nFileWriter s2nfilewriter2 = new S2nFileWriter(osw, s2nProfile);
+        NodeUtil.fprintAll(s2nfilewriter2, node3);
     }
 
     /**

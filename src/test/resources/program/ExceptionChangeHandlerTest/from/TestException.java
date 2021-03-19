@@ -40,6 +40,10 @@ public class TestException {
             // 登録失敗
             return false;
         }
+        } catch (Exception e) {
+            // 登録失敗
+            return false;
+        }
         return null;
 
     }

@@ -21,9 +21,7 @@ FROM
         TABLE2
     WHERE
     -- BEGIN
-    $if(param1) {
-        PARAM1 = RPAD(:param1, 10, ' ')
-}
+    $if(param1) { PARAM1 = RPAD(:param1, 10, ' ') }
     AND
 $if(param2) {
      PARAM2 = :param2
@@ -131,3 +129,6 @@ OR
 $if(param3) {
      TEST_USERID = RPAD(:param3, 10, ' ')
 }
+
+sqlConvertApi06 =
+    $if(param1) {  }

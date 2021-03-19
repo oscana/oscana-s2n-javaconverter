@@ -37,12 +37,12 @@ public class TestConvertJavaProgramForServiceService extends ChangeTestBaseServi
     }
 
     public int doUpdateBySqlFile(String path, Object parameter) {
-        return updateBySqlFile(path, parameter).execute();
+        return updateBySqlFile ( path, parameter ) . execute ( );
 
     }
 
     public Ope doFindById(String id) {
-        return findById(id);
+        return findById ( id );
     }
 
     public List<Ope> doSelect() {
@@ -50,7 +50,7 @@ public class TestConvertJavaProgramForServiceService extends ChangeTestBaseServi
     }
 
     public List<Ope> doFindAll() {
-        return findAll();
+        return findAll ( );
     }
 
     public int doUpdate(Ope ope) {
@@ -62,7 +62,7 @@ public class TestConvertJavaProgramForServiceService extends ChangeTestBaseServi
     }
 
     public int doDelete(Ope ope) {
-        return delete(ope);
+        return delete ( ope );
     }
 
     public List<Ope> getOpeListByWhere(
@@ -144,7 +144,7 @@ public class TestConvertJavaProgramForServiceService extends ChangeTestBaseServi
 
     public long getCountBySqlFileTest(Employee employee) {
 
-        long count = jdbcManager.getCountBySqlFile("examples/sql/employee/selectAll.sql");
+        long count = jdbcManager.getCountBySqlFile ("examples/sql/employee/selectAll.sql");
         return count;
     }
 

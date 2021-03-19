@@ -23,7 +23,8 @@ import nablarch.common.dao.UniversalDao;
 public class TestConvertJavaProgramService06 implements Serializable {
 
     public int insert(Employee employee) {
-        int count = UniversalDao.insert(employee);
+        // TODO ツールで変換できません :  
+        int count = jdbcManager.insert ( employee ) . execute( );
         return count;
     }
 

@@ -23,7 +23,8 @@ import nablarch.common.dao.UniversalDao;
 public class TestConvertJavaProgramService01 implements Serializable {
 
     public List<EmployeeDto> selectBySQLFile() {
-        List<EmployeeDto> results = UniversalDao.findAllBySqlFile(EmployeeDto.class,ParamFilter.sqlFileNameToKey( "test.sql"),new Object[0]);
+        // TODO ツールで変換できません :  
+        List<EmployeeDto> results = jdbcManager.selectBySqlFile (EmployeeDto.class, "test.sql" ) . getResultList();
         return results;
     }
 

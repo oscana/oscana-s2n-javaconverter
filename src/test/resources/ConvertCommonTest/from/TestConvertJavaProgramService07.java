@@ -11,7 +11,7 @@ import java.util.List;
 public class TestConvertJavaProgramService07 implements Serializable {
 
     public int update(Employee employee) {
-        int count = jdbcManager.update(employee).execute();
+        int count = jdbcManager.update ( employee ) . execute( );
         return count;
     }
 

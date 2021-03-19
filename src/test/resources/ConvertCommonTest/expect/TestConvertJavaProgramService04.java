@@ -23,7 +23,8 @@ import nablarch.common.dao.UniversalDao;
 public class TestConvertJavaProgramService04 implements Serializable {
 
     public Employee from() {
-        Employee result = UniversalDao.findAll(Employee.class);
+        // TODO ツールで変換できません :  
+        Employee result = jdbcManager.from ( Employee.class ) . getSingleResult( );
         return result;
     }
 

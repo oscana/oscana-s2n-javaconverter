@@ -149,7 +149,7 @@ testEntity35 = new Copy(testEntity.getClass(), testMap35).includes("test").prefi
         }
 
 
-        SessionScope scope = OscanaSingletonContainerFactory.getContainer().getComponent("sessionScope");
+        SessionScope scope = OscanaSingletonContainerFactory.getContainer().getComponent ("sessionScope");
         SessionScope scope = OscanaSingletonContainerFactory.getContainer().getComponent("session" + "Scope");
         SessionScope scope = OscanaSingletonContainerFactory.getContainer().getComponent(scopeName);
         SessionScope scope = OscanaSingletonContainerFactory.getContainer().getComponent(scope.getName());
@@ -161,8 +161,11 @@ testEntity35 = new Copy(testEntity.getClass(), testMap35).includes("test").prefi
         /**SingletonS2ContainerHandlerのテストデータ--end*/
 
         /**AssertionUtilHandlerのテストデータ--start*/
-        if (obj == null) { throw new NullPointerException(msg); }
-        if (getObject() == null) { throw new NullPointerException(msg()); }
+        SAssertionUtil.assertNotNull (msg, obj);
+        if(test == 3){
+            if (obj == null) { throw new NullPointerException(msg); }
+        }
+        if (getObject() == null) { throw new NullPointerException(msg("1) error")); }
         if (obj == null) { throw new NullPointerException("error"); }
         if (obj == null) { throw new NullPointerException("error"+"01"); }
         if (getObject1().getObject2() == null) { throw new NullPointerException("error"+msg()); }

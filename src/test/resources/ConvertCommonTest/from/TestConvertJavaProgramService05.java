@@ -11,7 +11,7 @@ import java.util.List;
 public class TestConvertJavaProgramService05 implements Serializable {
 
     public int[] insertBatch(List<Employee> employees) {
-        int[] countArray = jdbcManager.insertBatch(employees).execute();
+        int[] countArray = jdbcManager.insertBatch ( employees ) . execute( );
         return countArray;
     }
 

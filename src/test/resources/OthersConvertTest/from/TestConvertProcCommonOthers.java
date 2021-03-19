@@ -62,6 +62,9 @@ public class TestConvertProcCommonOthers {
 
     /** パスワード履歴を保持する数 */
     public static final Integer PASSWORD_HISTORY_COUNT = Integer.parseInt(OscanaPropertyUtil
-        .getOscanaProperty("PASSWORD_HISTORY_COUNT"));
+        . getOscanaProperty("PASSWORD_HISTORY_COUNT"));
 
+
+    OscanaPropertyUtil
+    .getOscanaProperty("PASSWORD_SALT_LENGTH");
 }

@@ -68,6 +68,8 @@ public class TestConvertProcCommonOthers {
     public static final Integer PASSWORD_VALID_DAYS = Integer.parseInt(OscanaPropertyUtil.getOscanaProperty("PASSWORD_VALID_DAYS"));
 
     /** パスワード履歴を保持する数 */
-    public static final Integer PASSWORD_HISTORY_COUNT = Integer.parseInt(OscanaPropertyUtil.getOscanaProperty("PASSWORD_HISTORY_COUNT"));
+    public static final Integer PASSWORD_HISTORY_COUNT = Integer.parseInt(OscanaPropertyUtil. getOscanaProperty("PASSWORD_HISTORY_COUNT"));
 
+
+    OscanaPropertyUtil.getOscanaProperty("PASSWORD_SALT_LENGTH");
 }

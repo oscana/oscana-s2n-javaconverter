@@ -20,9 +20,7 @@ FROM
         TABLE2
     WHERE
     /*BEGIN*/
-    /*IF null != param1*/
-        PARAM1 = RPAD(/*param1*/, 10, ' ')
-    /*END*/
+    /*IF null != param1*/ PARAM1 = RPAD(/*param1*/, 10, ' ') /*END*/
     /*IF null != param2*/
     AND PARAM2 = /*param2*/
     /*END*/

@@ -11,9 +11,9 @@ import java.util.List;
 public class TestConvertJavaProgramService01 implements Serializable {
 
     public List<EmployeeDto> selectBySQLFile() {
-        List<EmployeeDto> results = jdbcManager.selectBySqlFile(
+        List<EmployeeDto> results = jdbcManager.selectBySqlFile (
                         EmployeeDto.class,
-                        "test.sql").getResultList();
+                        "test.sql" ) . getResultList();
         return results;
     }
 

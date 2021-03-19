@@ -11,7 +11,7 @@ import java.util.List;
 public class TestConvertJavaProgramService02 implements Serializable {
 
     public long getCountBySqlFile() {
-        long count = jdbcManager.getCountBySqlFile("getCountBySqlFile.sql");
+        long count = jdbcManager.getCountBySqlFile ( "getCountBySqlFile.sql" );
         return count;
     }
 

@@ -20,12 +20,12 @@ public class TestConvertServiceApi02Service extends ChangeTestBaseService implem
     }
 
     public Ope getOpeByOne(Class<Ope> baseClass, String path) {
-        return selectBySqlFile(baseClass, path).getSingleResult();
+        return selectBySqlFile (baseClass, path).getSingleResult();
 
     }
 
     public long getCountOpeBySqlFile(String path, Object parameter) {
-        return getCountBySqlFile(path, parameter);
+        return getCountBySqlFile (path, parameter);
 
     }
 
@@ -39,11 +39,11 @@ public class TestConvertServiceApi02Service extends ChangeTestBaseService implem
     }
 
     public List<Ope> doSelect() {
-        return select().getResultList();
+        return select ( ) . getResultList ( );
     }
 
     public List<Ope> doFindAll() {
-        return findAll();
+        return (List<Ope>)findAll();
     }
 
     public int doUpdate(Ope ope) {
@@ -85,7 +85,7 @@ public class TestConvertServiceApi02Service extends ChangeTestBaseService implem
     public List<BeanMap> findByHulftJisekiAriCondition(BeanMap where) {
 
         List<BeanMap> testMapList = selectBySqlFile(
-                BeanMap.class, "test_10.sql", where)
+                BeanMap.class, "test#10.sql", where)
                         .getResultList();
 
         ArrayList<BeanMap> testMapList = new ArrayList<BeanMap>();

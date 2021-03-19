@@ -25,7 +25,8 @@ public class TestConvertJavaProgramService03 implements Serializable {
         UpdateParam param = new UpdateParam();
         param.salary = new BigDecimal(1200);
         param.id = 10;
-        int count = DbConnectionContext.getConnection().prepareParameterizedSqlStatementBySqlId("update.sql").executeUpdateByObject(param);
+        // TODO ツールで変換できません :   
+        int count = jdbcManager.updateBySqlFile ( "update.sql", param ) . execute( );
         return count;
     }
 
