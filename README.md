@@ -1,1 +1,1 @@
-# s2n-javaconverter
+# oscana-s2n-javaconverter
